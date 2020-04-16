@@ -1,0 +1,78 @@
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<style>
+    #customers {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Exams Records</h1>
+        <a href="/add_exam" class="bt btn-sm btn-primary">Add user</a></button><br/><br/>
+    <table class="table table-dark table-striped">
+     <table class="table table-striped table-primary">
+      <thead>
+        <tr>
+          <th>createId</th>
+          <th>startDate</th>
+          <th>endDate</th>
+          
+         
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%if (record.length >0){ %>
+        <% record.forEach(function(row){ %>
+        <tr>
+          <td><%= row.createId %></td>
+          <td><%= row.startDate %></td>
+          <td><%= row.endDate %></td>
+          
+        
+          <td>
+            <% if(row.image){ %>
+            <img src="./uploads/<%= row.image %>" alt="profile image" width="80">
+          <% } %>
+          </td>
+          <td>>
+            <a class="btn btn-danger btn-xs" href='/exam/delete/ <%= row.createId %>'><i class="fa fa-trash"></i></a></td>
+          </td>
+        </tr>
+        <% })}else{ %>
+          <tr>
+              <td colspan="4">No Record Found</td>
+              
+            </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </form>
+  

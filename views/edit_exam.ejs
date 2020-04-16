@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<form action="/exam/edit/" method="POST">
+    <input type="hidden" name="id" value="<%= id %>">
+<div class="container">
+    <% records.forEach(function(row){ %>
+
+    
+            <form class="form-horizontal" role="form">
+                <h2 style="text-align: center;">Exam Data </h2>
+                <div class="form-group">
+                  <label for="id" class="col-sm-3 control-label">Id</label>
+                  <div class="col-sm-9">
+                      <input type="text" id="id" value="<%= row.id %>"    name="id" placeholder="Please Enter id" class="form-control">
+                      
+                      </div>
+                  </div>
+                <div class="form-group">
+                    <label for="startDate" class="col-sm-3 control-label">start Date</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="startDate"  value="<%= row.startDate %>" placeholder="Please Enter start Date" name="startDate" class="form-control" autofocus>
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="endDate" class="col-sm-3 control-label">end Date</label>
+                    <div class="col-sm-9">
+                        <input type="date" id=endDate value="<%= row.endDate %>" name="endDate" placeholder="Please Enter end Date" class="form-control">
+                        
+                        </div>
+                    </div>
+                   
+                </div>
+              
+                
+               
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Add Records</button>
+                    </div>
+                    <% }) %>
+                </div>
+                
+            </form> <!-- /form -->
+        </div> <!-- ./container -->

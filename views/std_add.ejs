@@ -1,0 +1,27 @@
+<html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Records</h2>
+    <form action="/stdinfo/save" method="POST">
+    <div class="form-group">
+      <label for="studentId">studentId</label>
+      <input type="text" class="form-control" id="studentId" name="studentId">
+    </div>
+    <div class="form-group">
+      <label for="termId">termId</label>
+      <input type="text" class="form-control" id="termId" name="termId">
+    </div>
+    <div class="form-group">
+      <label for="addedDate">addedDate</label>
+      <input type="date" class="form-control" id="addedDate" name="addedDate">
+    </div>
+    <button type="submit" class="btn btn-primaary">Submit</button>
+  </form>
+  </div>
+
+  </body>
+</html>

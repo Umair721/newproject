@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    #customers {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+    <form method="POST" action="/exam/save">
+        <div class="container">
+            <h1><%= title %></h1>
+           
+                    <form class="form-horizontal" role="form">
+                        <h2 style="text-align: center;">Exams Data </h2>
+                        <div class="form-group">
+                          <label for="createId" class="col-sm-3 control-label">createId</label>
+                          <div class="col-sm-9">
+                              <input type="Text" id="createId" name="createId" placeholder="Please Enter createId" class="form-control" required>
+                              
+                              </div>
+                          </div>
+                        <div class="form-group">
+                            <label for="startDate" class="col-sm-3 control-label">startDate</label>
+                            <div class="col-sm-9">
+                                <input type="date" id="startDate" placeholder="Please Enter startDate" name="startDate" class="form-control" autofocus required>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate" class="col-sm-3 control-label">endDate</label>
+                            <div class="col-sm-9">
+                                <input type="date" id="" name="endDate" placeholder="Please Enter end Date" class="form-control" required>
+                                
+                                </div>
+                              </div>
+                      
+                        
+                       
+                        <div class="form-group">
+                            <div class="col-sm-9 col-sm-offset-3">
+                                <button type="submit" class="btn btn-primary btn-block">Add Records</button>
+                            </div>
+                        </div>
+                    </form> <!-- /form -->
+                </div> <!-- ./container -->
